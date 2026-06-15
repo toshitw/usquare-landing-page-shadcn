@@ -1,14 +1,29 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/layout/theme-provider";
+import { cn } from "@/lib/utils";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shadcn - Landing template",
-  description: "Landing template from Shadcn",
+  title: "USQUARE CONSULTING - IT Consulting & Digital Transformation",
+  description:
+    "USQUARE CONSULTING helps organizations build, modernize, integrate, and operate enterprise technology platforms through IT consulting, system integration, automation, cloud, AI, cybersecurity, and managed services.",
+  openGraph: {
+    title: "USQUARE CONSULTING - IT Consulting & Digital Transformation",
+    description:
+      "Build, modernize, integrate, and operate enterprise technology platforms with less complexity.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "USQUARE CONSULTING - IT Consulting & Digital Transformation",
+    description:
+      "Build, modernize, integrate, and operate enterprise technology platforms with less complexity.",
+  },
 };
 
 export default function RootLayout({
@@ -17,16 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background", inter.className)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-
           {children}
         </ThemeProvider>
       </body>

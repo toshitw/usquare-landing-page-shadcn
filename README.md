@@ -1,56 +1,54 @@
-# Shadcn Landing Page Template
+# USQUARE CONSULTING Landing Page
 
-## <a href="https://ui.shadcn.com/" target="_blank">Shadcn</a> + <a href="https://nextjs.org/" target="_blank">Next.js</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>.
-
-### This is a project conversion <a href="https://github.com/leoMirandaa/shadcn-vue-landing-page" target="_blank">Shadcn-Vue</a> to NextJS
-
-![Alt text](./public/demo-img.jpg)
+Corporate landing page for USQUARE CONSULTING, built with Next.js App Router,
+React, TypeScript, Tailwind CSS, and shadcn/ui primitives.
 
 ## Sections
 
-- [x] Navbar
-- [x] Sidebar(mobile)
-- [x] Hero
-- [x] Sponsors
-- [x] Benefits
-- [x] Features
-- [x] Testimonials
-- [x] Team
-- [x] Community
-- [x] Contact
-- [x] Pricing
-- [x] Frequently Asked Questions(FAQ)
-- [x] Services
-- [x] Footer
+- Navbar
+- Hero
+- Enterprise proof
+- Services
+- NEXTPLATFORM
+- Methodology
+- Case studies
+- Industries
+- Technology capabilities
+- Final CTA
+- Footer
 
-## Features
+## Content
 
-- [x] Fully Responsive Design
-- [x] User Friendly Navigation
-- [x] Dark Mode
+Landing page copy and structured content live in:
 
-## How to install
-
-1. Clone this repositoy:
-
-```bash
-git clone https://github.com/nobruf/shadcn-landing-page.git
+```txt
+src/content/landing-page.ts
 ```
 
-2. Go into project
+Major page sections live in:
 
-```bash
-cd shadcn-landing-page
+```txt
+src/components/sections
 ```
 
-3. Install dependencies
+Shared layout components live in:
+
+```txt
+src/components/layout
+```
+
+## Local Development
 
 ```bash
 npm install
+npm run dev
 ```
 
-4. Run project
+Open `http://localhost:3000`.
+
+## Production Check
 
 ```bash
-npm run dev
+npm run lint
+npm run build
 ```
