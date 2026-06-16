@@ -57,3 +57,11 @@ npm run build
 
 Cloudflare Pages should build from the latest `main` branch commit with Node.js
 20 or newer.
+
+Recommended Pages settings:
+
+```txt
+Build command: npm run build
+Build output directory: out
+Deploy command: leave empty
+```
