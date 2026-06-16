@@ -52,3 +52,8 @@ Open `http://localhost:3000`.
 npm run lint
 npm run build
 ```
+
+## Cloudflare Pages
+
+Cloudflare Pages should build from the latest `main` branch commit with Node.js
+20 or newer.
