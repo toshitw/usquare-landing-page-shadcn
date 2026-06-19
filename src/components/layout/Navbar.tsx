@@ -19,7 +19,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-xl">
       <nav className="container flex h-16 items-center justify-between gap-6">
         <Link
           href="/"
@@ -29,9 +29,9 @@ export function Navbar() {
           <Image
             src="/brand/usquare-consulting-logo.svg"
             alt={navbar.logo}
-            width={220}
-            height={54}
-            className="h-10 w-auto"
+            width={260}
+            height={70}
+            className="h-12 w-auto"
             priority
           />
         </Link>
@@ -69,9 +69,9 @@ export function Navbar() {
                 <Image
                   src="/brand/usquare-consulting-logo.svg"
                   alt={navbar.logo}
-                  width={220}
-                  height={54}
-                  className="h-10 w-auto"
+                  width={260}
+                  height={70}
+                  className="h-12 w-auto"
                 />
               </SheetTitle>
             </SheetHeader>
