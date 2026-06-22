@@ -6,7 +6,10 @@ import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-16 text-white sm:py-20 lg:py-24">
+    <section
+      id="consultation"
+      className="relative scroll-mt-16 overflow-hidden bg-slate-950 py-16 text-white sm:py-20 lg:py-24"
+    >
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(17,183,233,0.18),transparent_35%)]"

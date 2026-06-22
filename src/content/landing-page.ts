@@ -69,7 +69,7 @@ export const hero = {
   ],
   primaryCta: {
     label: "Start a Consultation",
-    href: "mailto:info@usquare.id?subject=Consultation%20Request%20for%20USQUARE%20CONSULTING",
+    href: "#consultation",
   },
   secondaryCta: {
     label: "Explore Our Services",
