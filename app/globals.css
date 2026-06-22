@@ -43,6 +43,17 @@ html {
   }
 }
 
+@keyframes network-depth-shift {
+  0%,
+  100% {
+    transform: translate3d(-8px, 8px, 0) scale(1.01);
+  }
+
+  50% {
+    transform: translate3d(10px, -10px, 0) scale(1.035);
+  }
+}
+
 @keyframes network-dash {
   from {
     stroke-dashoffset: 0;
@@ -50,6 +61,26 @@ html {
 
   to {
     stroke-dashoffset: -180;
+  }
+}
+
+@keyframes network-sweep {
+  0% {
+    stroke-dashoffset: 320;
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 0.85;
+  }
+
+  62% {
+    opacity: 0.2;
+  }
+
+  100% {
+    stroke-dashoffset: -260;
+    opacity: 0;
   }
 }
 
@@ -147,6 +178,42 @@ html {
     animation: icon-breathe 2.8s ease-in-out infinite;
   }
 
+  .hero-network {
+    --hero-x: 50%;
+    --hero-y: 42%;
+    --hero-tilt-x: 0deg;
+    --hero-tilt-y: 0deg;
+    perspective: 1200px;
+  }
+
+  .hero-network svg {
+    transform: rotateX(var(--hero-tilt-x)) rotateY(var(--hero-tilt-y)) scale(1.025);
+    transform-origin: center;
+    transition: transform 360ms ease-out;
+  }
+
+  .hero-cursor-glow {
+    background:
+      radial-gradient(circle at var(--hero-x) var(--hero-y), rgba(17, 183, 233, 0.34), rgba(14, 133, 162, 0.12) 18rem, transparent 34rem),
+      radial-gradient(circle at calc(100% - var(--hero-x)) calc(100% - var(--hero-y)), rgba(5, 90, 143, 0.18), transparent 30rem);
+    filter: blur(2px);
+    opacity: 0.9;
+    transition: background-position 360ms ease-out, opacity 360ms ease-out;
+  }
+
+  .hero-depth-wash {
+    background:
+      linear-gradient(115deg, rgba(17, 183, 233, 0.08), transparent 34%),
+      linear-gradient(245deg, rgba(1, 44, 96, 0.28), transparent 42%);
+    mix-blend-mode: screen;
+    opacity: 0.7;
+  }
+
+  .hero-network .network-depth {
+    transform-origin: center;
+    animation: network-depth-shift 18s ease-in-out infinite;
+  }
+
   .hero-network .network-glow {
     transform-origin: center;
     animation: network-drift 14s ease-in-out infinite;
@@ -166,6 +233,17 @@ html {
     animation-direction: reverse;
   }
 
+  .hero-network .network-sweeps path {
+    stroke-dasharray: 140 540;
+    stroke-linecap: round;
+    animation: network-sweep 7.5s ease-in-out infinite;
+  }
+
+  .hero-network .network-sweeps path:nth-child(2) {
+    animation-delay: -3.25s;
+    animation-duration: 9s;
+  }
+
   .hero-network .network-nodes circle {
     transform-origin: center;
     animation: network-pulse 3.6s ease-in-out infinite;
@@ -182,9 +260,17 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .animated-icon,
+  .hero-network svg,
+  .hero-network .network-depth,
   .hero-network .network-glow,
   .hero-network .network-lines path,
+  .hero-network .network-sweeps path,
   .hero-network .network-nodes circle {
     animation: none;
+    transform: none;
+  }
+
+  .hero-cursor-glow {
+    opacity: 0.45;
   }
 }

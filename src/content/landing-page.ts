@@ -69,7 +69,7 @@ export const hero = {
   ],
   primaryCta: {
     label: "Start a Consultation",
-    href: "#contact",
+    href: "mailto:info@usquare.id?subject=Consultation%20Request%20for%20USQUARE%20CONSULTING",
   },
   secondaryCta: {
     label: "Explore Our Services",
@@ -459,11 +459,11 @@ export const cta = {
     "Whether you are modernizing legacy systems, building new digital services, automating business processes, or improving IT operations, we can help you move from strategy to execution.",
   primaryCta: {
     label: "Schedule a Consultation",
-    href: "#contact",
+    href: "mailto:info@usquare.id?subject=Consultation%20Request%20for%20USQUARE%20CONSULTING",
   },
   secondaryCta: {
     label: "Contact USQUARE CONSULTING",
-    href: "#contact",
+    href: "mailto:info@usquare.id?subject=Inquiry%20for%20USQUARE%20CONSULTING",
   },
 };
 
