@@ -27,6 +27,7 @@ export function CaseStudiesSection() {
                 fill
                 sizes="(min-width: 1024px) 33vw, 100vw"
                 className="object-cover transition-transform duration-500 hover:scale-105"
+                style={{ objectPosition: item.imagePosition ?? "center" }}
               />
               <div
                 aria-hidden="true"

@@ -24,6 +24,7 @@ export type ProcessStep = ContentCard & {
 export type CaseStudy = ContentCard & {
   image: string;
   imageAlt: string;
+  imagePosition?: string;
   tags: string[];
 };
 
@@ -269,10 +270,10 @@ export const caseStudies = {
       title: "Bank Mandiri - Core Banking API Modernization",
       description:
         "Modernized legacy core banking connectivity and enabled more agile open API connectivity using NEXTPLATFORM capabilities.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+      image: "/brand/bank-mandiri.jpg",
       imageAlt:
         "Analytics dashboard representing secure banking API modernization",
+      imagePosition: "center 42%",
       tags: [
         "Core Banking",
         "API Gateway",
@@ -284,19 +285,20 @@ export const caseStudies = {
       title: "CIVD - Oil & Gas Vendor Management",
       description:
         "Supported national-scale vendor qualification through BPMN/DMN-based workflow orchestration, compliance workflows, and collaborative process design.",
-      image: "/brand/civd-oil-gas-vendor-management.png",
+      image: "/brand/civd.jpg",
       imageAlt:
         "Oil and gas professionals reviewing vendor management workflows",
+      imagePosition: "center center",
       tags: ["Oil & Gas", "Vendor Management", "Workflow Automation", "Compliance"],
     },
     {
       title: "Coca-Cola Amatil Indonesia - Business Process Automation",
       description:
         "Helped transition from rigid homegrown applications into scalable workflow and application development using NEXTPLATFORM.",
-      image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80",
+      image: "/brand/coca-cola-amatil.jpg",
       imageAlt:
         "Enterprise team collaborating on business process automation",
+      imagePosition: "center 45%",
       tags: [
         "Business Automation",
         "Enterprise Apps",
@@ -308,10 +310,10 @@ export const caseStudies = {
       title: "BTPN Syariah - Mobile Digital Banking Transformation",
       description:
         "Supported secure, scalable mobile banking services with online and offline capability, transaction security, and high-concurrency readiness.",
-      image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80",
+      image: "/brand/btpn-syariah.webp",
       imageAlt:
         "Mobile payment interface representing digital banking transformation",
+      imagePosition: "center center",
       tags: [
         "Digital Banking",
         "Mobile Platform",
@@ -323,20 +325,20 @@ export const caseStudies = {
       title: "Public Sector Transformation - BPMN-Based Bureaucracy Automation",
       description:
         "Demonstrates how NEXTFLOW can support transparent, accountable, and efficient public-sector workflows.",
-      image:
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+      image: "/brand/public-sector-bpmn.jpg",
       imageAlt:
         "Modern civic office environment representing public-sector services",
+      imagePosition: "center 45%",
       tags: ["Public Sector", "BPMN", "SPBE", "Workflow Automation"],
     },
     {
       title: "Industrial IoT - Smart Palm Oil Processing",
       description:
         "Demonstrates how real-time data, predictive maintenance, audit trails, and analytics can support smarter industrial operations.",
-      image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80",
+      image: "/brand/palm-oil.jpg",
       imageAlt:
         "Industrial engineer working with machinery and operational systems",
+      imagePosition: "center center",
       tags: [
         "Industrial IoT",
         "Predictive Maintenance",
